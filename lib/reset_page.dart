@@ -57,7 +57,7 @@ class ResetPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MyButton(color: Colors.teal.shade300, buttonText: "     Continue     ", textColor: Colors.white),
+              MyButton(color: Colors.teal.shade300, buttonText: "       Continue       ", textColor: Colors.white),
             ],
           ),
 
