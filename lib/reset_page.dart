@@ -8,60 +8,65 @@ class ResetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 100.0),
-            child: Container(
+      body: Container(
+        color: Colors.grey[100],
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 80.0),
+              child: Container(
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Show us it\'s you!\n',
+                              style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 32),
+                            ),
+                            TextSpan(
+                              text: 'Please verify your email to continue',
+                              style: TextStyle(color: Colors.grey,fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ), // Add space between RichText and CustomTextField
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20.0),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 children: [
                   Expanded(
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Show us it\'s you!\n',
-                            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold, fontSize: 32),
-                          ),
-                          TextSpan(
-                            text: 'Please verify your email to continue',
-                            style: TextStyle(color: Colors.grey,fontSize: 16),
-                          ),
-                        ],
-                      ),
+                    child: CustomTextField(
+                      hintText: 'Email Address',
+                      suffixIcon: Icon(Icons.email, color: Color.fromRGBO(0, 188, 199, 1.0)
+                      ), // Change suffix icon as needed
                     ),
-                  ), // Add space between RichText and CustomTextField
+                  ),
                 ],
               ),
             ),
-          ),
 
-          SizedBox(height: 20.0),
+            SizedBox(height: 450.0),
 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  child: CustomTextField(
-                    hintText: 'Email Address',
-                    suffixIcon: Icon(Icons.email, color: Colors.teal.shade300), // Change suffix icon as needed
-                  ),
-                ),
+                MyButton(color: Color.fromRGBO(0, 188, 199, 1.0)
+                    , buttonText: "       Continue       ", textColor: Colors.white),
               ],
             ),
-          ),
 
-          SizedBox(height: 550.0),
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyButton(color: Colors.teal.shade300, buttonText: "       Continue       ", textColor: Colors.white),
-            ],
-          ),
-
-        ],
+          ],
+        ),
       ),
     );
   }

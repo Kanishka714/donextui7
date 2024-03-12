@@ -18,11 +18,11 @@ class _VerificationPageState extends State<VerificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        color: Colors.grey[100],
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 100.0, left: 40.0),
+              padding: const EdgeInsets.only(top: 80.0, left: 40.0),
               child: Row(
                 children: [
                   Flexible(
@@ -35,11 +35,11 @@ class _VerificationPageState extends State<VerificationPage> {
                         ),
                         Text(
                           'Please enter the code we sent to',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: Colors.grey.shade800),
                         ),
                         Text(
                           'Catherinjames@gmail.com',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: Colors.grey.shade800),
                         ),
                       ],
                     ),
@@ -57,12 +57,19 @@ class _VerificationPageState extends State<VerificationPage> {
                 length: 4,
                 keyboardType: TextInputType.number,
                 animationType: AnimationType.fade,
+                enableActiveFill: true,
                 pinTheme: PinTheme(
                   shape: PinCodeFieldShape.box,
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(10),
                   fieldHeight: 50,
-                  fieldWidth: 50,
-                  activeFillColor: Colors.white,
+                  fieldWidth: 40,
+                  activeColor: Colors.white70, // Set active color to grey
+                  selectedColor: Colors.white70, // Set selected color to grey
+                  inactiveColor: Colors.white70, // Set inactive color to grey
+                  activeFillColor: Colors.white70,
+                  selectedFillColor: Colors.white70,
+                  inactiveFillColor: Colors.white70,
+                  borderWidth: 1,
                 ),
                 onChanged: (value) {
                   setState(() {
@@ -72,7 +79,8 @@ class _VerificationPageState extends State<VerificationPage> {
               ),
             ),
 
-            SizedBox(height: 30.0),
+
+            SizedBox(height: 20.0),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35.0),
@@ -97,10 +105,13 @@ class _VerificationPageState extends State<VerificationPage> {
                           'Create new password',
                           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 32.0),
                         ),
+
                         Text(
                           'Your name and password must be different from\n previously used passwords',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: Colors.grey.shade800),
                         ),
+
+                        SizedBox(height: 10.0),
                       ],
                     ),
                   ),
@@ -115,14 +126,12 @@ class _VerificationPageState extends State<VerificationPage> {
                   Expanded(
                     child: CustomTextField(
                       hintText: 'Password',
-                      suffixIcon: Icon(Icons.lock, color: Colors.teal.shade300),
+                      suffixIcon: Icon(Icons.lock, color: Color.fromRGBO(0, 188, 199, 1.0)),
                     ),
                   ),
                 ],
               ),
             ),
-
-            SizedBox(height: 20.0),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -131,6 +140,8 @@ class _VerificationPageState extends State<VerificationPage> {
               ],
             ),
 
+            SizedBox(height: 20.0),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
@@ -138,14 +149,12 @@ class _VerificationPageState extends State<VerificationPage> {
                   Expanded(
                     child: CustomTextField(
                       hintText: 'Confirm Password',
-                      suffixIcon: Icon(Icons.lock, color: Colors.teal.shade300),
+                      suffixIcon: Icon(Icons.lock, color: Color.fromRGBO(0, 188, 199, 1.0)),
                     ),
                   ),
                 ],
               ),
             ),
-
-            SizedBox(height: 20.0),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -159,7 +168,7 @@ class _VerificationPageState extends State<VerificationPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MyButton(color: Colors.teal.shade300, buttonText: " Reset Password ", textColor: Colors.white),
+                MyButton(color: Color.fromRGBO(0, 188, 199, 1.0), buttonText: " Reset Password ", textColor: Colors.white),
               ],
             ),
 
