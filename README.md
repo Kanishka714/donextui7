@@ -1,16 +1,3 @@
-# donextui7
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="1470" alt="Screenshot 2024-03-12 at 06 09 40" src="https://github.com/Kanishka714/donextui7/assets/130472767/b159ba83-6708-4f59-a262-5e4b779238ed">
+<img width="1470" alt="Screenshot 2024-03-12 at 06 07 46" src="https://github.com/Kanishka714/donextui7/assets/130472767/3615ab00-3482-4eb7-9fec-f2d58da1e38e">
